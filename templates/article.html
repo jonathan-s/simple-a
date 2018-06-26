@@ -7,10 +7,8 @@
         <header class="post-header">
             <h1 class="entry-title">
                 <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
-                <div class="post-time">
-                    {{ article.date }}
-                </div>
             </h1>
+            <div class="post-time">{{ article.date|datetimeformat("%d %B %Y")}}</div>
         </header>
         <div class="post-after">
             <div class="tags">

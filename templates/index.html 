@@ -6,7 +6,7 @@
       <article class="post">
         <header class="post-header">
           <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-          <div class="post-time">{{ article.date }}, Make a plugin. Words</div>
+          <div class="post-time">{{ article.date|datetimeformat("%d %B %Y") }}, Make a plugin. Words</div>
         </header>
 
         <div class="post-after">
@@ -21,5 +21,5 @@
       </article>
 
     {% endfor %}
-{% include !simple/pagination.html %}
+  {% endif %}
 {% endblock %}
