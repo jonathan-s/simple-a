@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+
+    <meta name="author" content="{{ AUTHOR }}">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="{{ SITEURL }}/css/milk.min.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/css/milk-responsive.min.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ SITEURL }}/css/fonts.css" rel="stylesheet" type="text/css" media="all">
+
+    <link rel="shortcut icon" href="{{ SITEURL }}/images/alexfinn.ico">
+    <link rel="apple-touch-icon" href="">
+
+    {% if FEED_ALL_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+    {% endif %}
+
+    {% if FEED_ALL_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+
+    <!--<link rel="canonical" href="{{ .Permalink }}"> -->
+  </head>
+
+  <body>
+    {% include 'includes/menu.html' %}
+    <div class="container">
+        <div class="content">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="posts">
+
+                    {% block content %}
+                    {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'includes/footer.html' %}
+    {% include 'includes/analytics.html' %}
+  </body>
+</html>
