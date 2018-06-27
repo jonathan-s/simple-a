@@ -13,7 +13,7 @@
         {% if article.tags %}
           <div class="tags">
           {% for tag in article.tags  %}
-                <a href="{{ SITEURL }}/tags/{{ tag.url }}">{{ tag }}</a>
+                <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
           {% endfor %}
           </div>
         {% endif %}
