@@ -29,6 +29,12 @@ figure.medium
     margin-right: auto;
 }
 
+:not(pre) > code {
+  font: inherit;
+  font-style: italic;
+  color: #000;
+}
+
 figure.large
 {
     width:500px;
@@ -67,11 +73,22 @@ footer {
  text-align: center;
 }
 
-.content h1 {
+.navbar a {
+  color: #3F3F3F;
+}
+
+h1,h2 {
   font-family: Philosopher, serif;
   color: #3F3F3F;
-  font-size: 1.8em;
   text-align: center;
+}
+
+h1 { font-size: 2.4em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+
+
+.content h1 {
   margin-bottom: 40px;
 }
 
@@ -92,6 +109,39 @@ footer {
   margin: auto;
   max-width: 980px;
   border-bottom: 1px solid #989898;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.menu-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.menu-item-2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.menu-item-3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.menu-item-4 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.menu-item-5 {
+  grid-column-start: 5;
+  grid-column-end: 6;
 }
 
 .container {
@@ -158,14 +208,12 @@ p {
 }
 
 .post-header h1 {
-  font-size: 1.8em;
   color: #444;
   font-family: Philosopher;
   margin-bottom: 10px;
 }
 
 .post-header a {
-    color: headings-color;
     font-size: 1em;
     color: #444;
 }
@@ -186,7 +234,6 @@ p {
 }
 
 .post-after ul {
-  clearfix()
   margin: 0;
   padding-left: 0;
   list-style: none;
