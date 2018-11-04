@@ -40,11 +40,9 @@
         "@type": "WebPage",
         "@id": "{{ SITEURL }}/"
       },
+      "datePublished": "{{ article.date|datetimeformat("%Y-%m-%d") }}"
       "headline": "{{ article.title }}",
       "image": [
-        "https://example.com/photos/1x1/photo.jpg",
-        "https://example.com/photos/4x3/photo.jpg",
-        "https://example.com/photos/16x9/photo.jpg"
        ],
       "author": {
         "@type": "Person",
@@ -53,17 +51,14 @@
        "publisher": {
         "@type": "Person",
         "name": "{{ AUTHOR }}",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ SITEURL }}/theme/images/letter-a.png"
-        }
+        "jobTitle": "Software Engineer"
       },
-      "keywords": {{ article.tags|join(', ') }}
+      "keywords": {{ article.tags|jsonarray }},
       "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.42",
           "reviewCount": "28"
-      }
+      },
       "wordCount": {{ article.stats.total_words }},
       "description": "{{ article.metadescription }}"
     }
