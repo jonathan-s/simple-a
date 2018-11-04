@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
-
-    <meta name="author" content="{{ AUTHOR }}">
-
+    {% include 'includes/meta.html' %}
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
@@ -29,8 +26,6 @@
     {% if FEED_ALL_RSS %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
     {% endif %}
-
-    {# <link rel="canonical" href="{{ .Permalink }}"> #}
   </head>
 
   <body>
