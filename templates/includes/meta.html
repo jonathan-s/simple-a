@@ -42,13 +42,8 @@
       },
       "datePublished": "{{ article.date|datetimeformat("%Y-%m-%d") }}",
       "headline": "{{ article.title }}",
-      "image": [
-       ],
+      {# "image": [], remove when I have proper images #}
       "author": {
-        "@type": "Person",
-        "name": "{{ AUTHOR }}"
-      },
-       "publisher": {
         "@type": "Person",
         "name": "{{ AUTHOR }}",
         "jobTitle": "Software Engineer"
