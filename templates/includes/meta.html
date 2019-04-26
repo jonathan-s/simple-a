@@ -8,7 +8,9 @@
 
 <meta property="og:site_name" content="{{ SITENAME }} - {{ AUTHOR }}">
 <meta property="og:locale" content="en_GB">
-
+<link rel="alternate" type="application/atom+xml"
+      title="RSS feed for Argparse"
+      href="{{ SITEURL }}/feeds/all.atom.xml" />
 
 {% if article %}
 <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">

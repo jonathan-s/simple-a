@@ -21,6 +21,10 @@ body {
   float: right;
 }
 
+form {
+    margin: 0;
+}
+
 figure.full img {
   width: 100%;
   max-width: 100%;
@@ -196,6 +200,10 @@ p {
   margin: 0 0 20px;
 }
 
+p:last-child {
+    margin: 0;
+}
+
 .content {
   text-align: left;
   font-family: "Liberation Serif", "Palatino Linotype", Georgia, serif;
@@ -349,6 +357,16 @@ code, pre {
     font-family: 'Liberation Mono', Monaco, Consolas;
     font-size: 14px;
     color: #2f1e2e
+}
+
+/* Includes */
+.blurb {
+    border: 2px solid #bf3f03;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fa5305;
+    color: #f2e8e6;
+    font-family: arial;
 }
 
 
