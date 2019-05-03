@@ -370,11 +370,12 @@ code, pre {
 }
 
 .highlight pre {
-    border-radius: 20px;
+    border-radius: 15px;
     border: 1px solid #333;
     border-left: 4px solid #fa5305;
     background: #272822;
     color: #f8f8f2;
+    padding-left: 20px;
 }
 
 /* Pygments monokai */
