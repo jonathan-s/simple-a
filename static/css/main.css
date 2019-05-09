@@ -359,6 +359,22 @@ code, pre {
     color: #2f1e2e
 }
 
+code::after {
+  content: "」";
+  padding-left: 3px;
+  margin-right: -10px;
+  position: relative;
+  bottom: -4px;
+}
+
+code::before {
+  content: "「";
+  padding-right: 5px;
+  margin-left: -10px;
+  position: relative;
+  top: -3px;
+}
+
 /* Includes */
 .blurb {
     border: 2px solid #bf3f03;
