@@ -204,6 +204,12 @@ p:last-child {
     margin: 0;
 }
 
+.content img {
+  max-height: 260px;
+  margin: auto;
+  display: block;
+}
+
 .content {
   text-align: left;
   font-family: "Liberation Serif", "Palatino Linotype", Georgia, serif;
