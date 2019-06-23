@@ -165,6 +165,20 @@ h4 { font-size: 1.2em; }
   grid-column-end: 6;
 }
 
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  .menu-item-2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 20px;
+  }
+
+  .menu-item-4 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+  }
+}
+
 .row-fluid .span12 ul .posts {
   margin: 0 0 10px 0;
 }
