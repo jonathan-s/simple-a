@@ -17,7 +17,9 @@
                 {% endfor %}
             </div>
         </div>
-        <img src="{{ SITEURL }}/{{ article.image }}">
+        {% if article.image %}
+        <img class="headline-image" src="{{ SITEURL }}/{{ article.image }}">
+        {% endif %}
         <hr>
         <div class="content">
             {{ article.content }}

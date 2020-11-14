@@ -219,9 +219,15 @@ p:last-child {
 }
 
 .content img {
-  max-height: 260px;
   margin: auto;
   display: block;
+}
+
+.content img.headline-image {
+    max-height: 260px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
 }
 
 .content {
