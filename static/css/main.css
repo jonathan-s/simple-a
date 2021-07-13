@@ -21,9 +21,7 @@ body {
   float: right;
 }
 
-form {
-    margin: 0;
-}
+form { margin: 0; }
 
 figure.full img {
   width: 100%;
@@ -277,10 +275,7 @@ p:last-child {
   font-family: Philosopher;
 }
 
-.post-after {
-  padding-left: 40px;
-  margin-bottom: 12px;
-}
+.post-after { margin-bottom: 12px; }
 
 .post-after ul {
   margin: 0;
