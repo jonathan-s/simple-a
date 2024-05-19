@@ -1,0 +1,16 @@
+footer {
+  line-height: normal;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  font-family: 'Liberation Sans', Helvetica, sans-serif;
+  padding-top: 2em;
+  text-align: center;
+  position: fixed;
+  z-index: 10;
+  bottom: 0px;
+  width: 100%;
+  background: white;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
