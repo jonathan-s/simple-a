@@ -42,12 +42,6 @@ figure.medium
     margin-right: auto;
 }
 
-:not(pre) > code {
-  font: inherit;
-  font-style: italic;
-  color: #000;
-}
-
 figure.large
 {
     width:500px;
@@ -357,6 +351,12 @@ a:hover {
   text-decoration: none;
 }
 
+:not(pre) > code {
+  font: inherit;
+  font-style: italic;
+  color: #000;
+}
+
 pre code {
   display: block;
   font-size: 14px;
@@ -373,7 +373,7 @@ code, pre {
     color: #2f1e2e
 }
 
-code::after {
+:not(pre) > code::after {
   content: "」";
   padding-left: 3px;
   margin-right: -10px;
@@ -381,7 +381,7 @@ code::after {
   bottom: -4px;
 }
 
-code::before {
+:not(pre) > code::before {
   content: "「";
   padding-right: 5px;
   margin-left: -10px;
