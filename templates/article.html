@@ -1,43 +1,71 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title|striptags }}{% endblock %}
 
+{% if article.category == "photography" %}
+
+  {% block body_class %}{{ article.category }}{% endblock %}
+  {% block container_class %}{{article.category }}{% endblock %}
+{% endif %}
+
 {% block content %}
 <section id="content" class="body">
-    <article class="post">
-        {% if article.image %}
-        <img class="headline-image" src="{{ SITEURL }}/{{ article.image }}">
-        {% endif %}
-        <header class="post-header">
-            <h1 class="entry-title">
-                <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
-            </h1>
-            <div class="post-time">{{ article.date|datetimeformat("%d %B %Y")}}</div>
-        </header>
-        <div class="post-after">
-            <div class="tags">
-                {% for tag in article.tags %}
-                    <a href="{{ SITEURL }}/{{ tag.url }}" title="">{{ tag }}</a>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="content">
-            {{ article.content }}
-        </div>
-        {% include 'includes/sponsor.html' %}
-        {% include 'includes/blurb.html' %}
+  {% if article.category == "photography" %}
 
-        <hr>
+    <article class="photo">
+      <img src="{{ SITEURL }}/{{ article.image }}">
 
-        <script src="https://utteranc.es/client.js"
-        repo="jonathan-s/argpar.se"
-        issue-term="title"
-        label="comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+      <h2>{{ article.title }}</h2>
+      <div class="post">
+        {{ article.content }}
+      </div>
+
+      <script src="https://utteranc.es/client.js"
+      repo="jonathan-s/argpar.se"
+      issue-term="title"
+      label="comment"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
       </script>
+      <br>
     </article>
 
+  {% else %}
+    <article class="post">
+      {% if article.image %}
+      <img class="headline-image" src="{{ SITEURL }}/{{ article.image }}">
+      {% endif %}
+      <header class="post-header">
+          <h1 class="entry-title">
+              <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+          </h1>
+          <div class="post-time">{{ article.date|datetimeformat("%d %B %Y")}}</div>
+      </header>
+      <div class="post-after">
+          <div class="tags">
+              {% for tag in article.tags %}
+                  <a href="{{ SITEURL }}/{{ tag.url }}" title="">{{ tag }}</a>
+              {% endfor %}
+          </div>
+      </div>
+      <div class="content">
+          {{ article.content }}
+      </div>
+      {% include 'includes/sponsor.html' %}
+      {% include 'includes/blurb.html' %}
+
+      <hr>
+
+      <script src="https://utteranc.es/client.js"
+      repo="jonathan-s/argpar.se"
+      issue-term="title"
+      label="comment"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+      </script>
+    </article>
+  {% endif %}
 
 </section>
 {% endblock %}

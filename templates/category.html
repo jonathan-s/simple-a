@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% if category == "photography" %}
+  {% block body_class %}photography{% endblock %}
+  {% block container_class %}photography{% endblock %}
+{% endif %}
+
+{% block content %}
+  {% if category == "photography" %}
+    {% include 'includes/category-photography.html' %}
+  {% else %}
+    {% for article in articles %}
+      {% include 'includes/post-list-entry.html' with context %}
+    {% endfor %}
+  {% endif %}
+{% endblock %}

@@ -1,11 +1,26 @@
 <div class="navbar navbar-fixed-top">
-  <div id="navbar-inner" class="menu-container">
-    <h2 class="menu-item-2">
-      <a href="{{ SITEURL }}/about">About</a>
-    </h2>
-    <div class="menu-item-3" id="logo">
-      <a href="{{ SITEURL }}"><img src="{{ SITEURL }}/theme/images/letter-a.png" width="100px"></img></a>
+  <div id="navbar-inner">
+    <div class="menu-container">
+
+        <div id="logo">
+          <a href="{{ SITEURL }}">
+            <img src="{{ SITEURL }}/theme/images/letter-a.png">
+          </a>
+        </div>
+
+        <h2>
+          <a href="{{ SITEURL }}">Articles</a>
+        </h2>
+
+        <h2>
+          <a href="{{ SITEURL }}/category/photography">Photography</a>
+        </h2>
+
+        <h2>
+          <a href="{{ SITEURL }}/about">About</a>
+        </h2>
+
+        <h2><a href="mailto:{{ EMAIL }}">Contact</a></h2>
+      </div>
     </div>
-    <h2 class="menu-item-4"><a href="mailto:{{ EMAIL }}">Contact</a></h2>
-  </div>
 </div>
