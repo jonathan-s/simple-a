@@ -2,9 +2,7 @@
 {% block content %}
   {% if articles %}
     {% for article in articles_page.object_list  %}
-      {% if article.category != "photography" %}
-        {% include 'includes/post-list-entry.html' with context %}
-      {% endif %}
+      {% include 'includes/post-list-entry.html' with context %}
     {% endfor %}
   {% endif %}
 {% endblock %}
