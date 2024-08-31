@@ -11,8 +11,6 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
 
-      <link href="{{ SITEURL }}/theme/css/milk.min.css" rel="stylesheet">
-      <link href="{{ SITEURL }}/theme/css/milk-responsive.min.css" rel="stylesheet">
       <link href="{{ SITEURL }}/theme/css/main.css" rel="stylesheet" type="text/css" media="all">
       <link href="{{ SITEURL }}/theme/css/fonts.css" rel="stylesheet" type="text/css" media="all">
 
@@ -28,9 +26,9 @@
       {% endif %}
     </head>
 
-    <body>
+    <body class="{% block body_class %}{% endblock %}">
       {% include 'includes/menu.html' %}
-      <div class="container">
+      <div class="container {% block container_class %}{% endblock %}">
         <div class="content">
           <div class="row-fluid">
             <div class="span12">

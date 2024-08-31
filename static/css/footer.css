@@ -9,8 +9,8 @@ footer {
   z-index: 10;
   bottom: 0px;
   width: 100%;
-  background: white;
   display: flex;
   gap: 10px;
   justify-content: center;
+  background: inherit;
 }

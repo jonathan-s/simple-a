@@ -2,26 +2,7 @@
 {% block content %}
   {% if articles %}
     {% for article in articles_page.object_list  %}
-
-      <article class="post">
-        <header class="post-header">
-          <h1><a href="{{ SITEURL }}/{{ article.url }}/">{{ article.title }}</a></h1>
-          <div class="post-time">
-            {{ article.date|datetimeformat("%d %B %Y") }}, about ~<i>{{ article.stats.read_mins }} minutes</i>
-          </div>
-        </header>
-
-        <div class="post-after">
-        {% if article.tags %}
-          <div class="tags">
-          {% for tag in article.tags  %}
-                <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-          {% endfor %}
-          </div>
-        {% endif %}
-        </div>
-      </article>
-
+      {% include 'includes/post-list-entry.html' with context %}
     {% endfor %}
   {% endif %}
 {% endblock %}
