@@ -122,6 +122,7 @@ body.photography {
   transition: transform 300ms ease-out;
   will-change: transform;
   line-height: 100%;
+  overflow-wrap: break-word;
 }
 
 .photo-grid a:hover {
