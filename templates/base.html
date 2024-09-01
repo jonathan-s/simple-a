@@ -30,15 +30,15 @@
       {% include 'includes/menu.html' %}
       <div class="container {% block container_class %}{% endblock %}">
         <div class="content">
-          <div class="row-fluid">
-            <div class="span12">
-              <div class="posts">
-
-                {% block content %}
-                {% endblock %}
-              </div>
-            </div>
+          <div class="posts">
+            {% block content %}
+            {% endblock %}
           </div>
+          {% if category != "photography" %}
+          <div class="socials">
+
+          </div>
+          {% endif %}
         </div>
       </div>
       {% include 'includes/footer.html' %}
