@@ -1,0 +1,23 @@
+{#
+{% macro title(article) %}
+  {% if article.category == "links" %}→{% endif %}
+  {{ article.title | striptags }}
+{% endmacro %}
+
+{% macro link(article) %}
+  {% if article.category == "links" %}
+    {{ article.link }}
+  {% else %}
+    {{ SITEURL }}/{{ article.url }}
+  {% endif %}
+{% endmacro %}
+#}
+
+{% macro description(article) %}
+  {% if article.image %}
+    <img src="{{ SITEURL }}/{{ article.image }}">
+  {% endif %}
+
+  {{ article.get_content(url) }}
+  <img src="https://argparse.goatcounter.com/count?p=/{{ SITEURL }}/{{ article.url }}%3Futm_source%3Dargpar.se%26utm_medium%3Dfeed">
+{% endmacro %}
