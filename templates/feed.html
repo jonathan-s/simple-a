@@ -15,9 +15,9 @@
 
 {% macro description(article) %}
   {% if article.image %}
-  <img src="{{ SITEURL }}/{{ article.image }}">
+  &lt;img src="{{ SITEURL }}/{{ article.image }}"&gt;
   {% endif %}
 
   {{ article.get_content(article.url) }}
-  <img src="https://argparse.goatcounter.com/count?p=/{{ SITEURL }}/{{ article.url }}%3Futm_source%3Dargpar.se%26utm_medium%3Dfeed">
+  &lt;img src="https://argparse.goatcounter.com/count?p=/{{ SITEURL }}/{{ article.url }}%3Futm_source%3Dargpar.se%26utm_medium%3Dfeed"&gt;
 {% endmacro %}
