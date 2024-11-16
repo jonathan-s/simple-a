@@ -8,7 +8,26 @@ body {
   font-size: 16px;
   margin-bottom: 10px;
   padding: 0;
+  color: #0f172a;
 }
+
+body.ab-dark {
+  color: #f1f5f9;
+}
+
+body.ab-light {
+  color: #0f172a;
+}
+
+.ab-dark .navbar a {
+  color: #f1f5f9;
+}
+
+.ab-transition {
+  transition: background-color 1s ease-out,
+              color 1s ease-out;
+}
+
 
 /* Custom container */
 
@@ -81,7 +100,6 @@ blockquote {
 
 h1,h2,h3,h4 {
   font-family: Philosopher, serif;
-  color: #3F3F3F;
   text-align: center;
 }
 
@@ -115,7 +133,7 @@ h4 { font-size: 1.2em; }
 }
 
 .navbar a {
-  color: #3F3F3F;
+  color: #0f172a;
 }
 
 .navbar .nav {

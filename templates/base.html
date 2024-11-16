@@ -24,6 +24,8 @@
       {% if FEED_ALL_RSS %}
       <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
       {% endif %}
+
+      {% block script %}{% endblock %}
       <script>0</script>
     </head>
 

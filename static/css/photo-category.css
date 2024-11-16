@@ -1,12 +1,10 @@
-@import "https://fonts.googleapis.com/css?family=Oswald:300";
-
 .container.photography {
   width: min(100% - 2rem, 1400px);
   max-width: unset;
 }
 
 body.photography {
-  background-color: #d9ffdd;
+  background-color: #e5e5e5;
 }
 
 .photo-grid {

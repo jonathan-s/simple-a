@@ -7,12 +7,23 @@
   {% block container_class %}{{article.category }}{% endblock %}
 {% endif %}
 
+{% block script %}
+  {% if article.category == "photography" %}
+    <script src="{{ SITEURL }}/theme/js/adaptive-bg.js" type="module"></script>
+  {% endif %}
+{% endblock %}
+
 {% block content %}
 <section id="content" class="body">
   {% if article.category == "photography" %}
 
     <article class="photo">
-      <img src="{{ SITEURL }}/{{ article.image }}">
+      <img src="{{ SITEURL }}/{{ article.image }}"
+        data-ab
+        data-ab-parent="body.photography"
+        data-ab-normalize-textcolor="true"
+        data-ab-normalized-light="#f1f5f9"
+      >
 
       <h2>{{ article.title }}</h2>
       <div class="post">
