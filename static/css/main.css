@@ -4,11 +4,18 @@
 @import "./photo-category.css";
 @import "./pygments.css";
 
+@keyframes fade-in {
+  0% { opacity: 0}
+  100% { opacity: 1}
+}
+
 body {
   font-size: 16px;
   margin-bottom: 10px;
   padding: 0;
   color: #0f172a;
+  opacity: 0;
+  animation: fade-in .3s ease-in forwards;
 }
 
 body.ab-dark {
@@ -24,8 +31,8 @@ body.ab-light {
 }
 
 .ab-transition {
-  transition: background-color 1s ease-out,
-              color 1s ease-out;
+  transition: background-color 2s ease,
+              color 2s ease;
 }
 
 
