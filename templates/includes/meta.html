@@ -4,7 +4,7 @@
 <meta property="twitter:card" content="summary">
 <meta property="twitter:creator" content="{{ AUTHOR }}">
 <meta property="twitter:site" content="{{ TWITTER_USERNAME }}">
-<meta property="twitter:creator" content="{{ TWITTER_USERNAME }}">
+<meta property="twitter:creator" content="{{ TWITTER_USERNAME }}">
 
 <meta property="og:site_name" content="{{ SITENAME }} - {{ AUTHOR }}">
 <meta property="og:locale" content="en_GB">
@@ -13,7 +13,7 @@
       href="{{ SITEURL }}/feeds/all.atom.xml" />
 
 {% if article %}
-<link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
+<link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
 <meta name="description" content="{{ article.metadescription }}">
 
 {# facebook things, published and modified, make that the file times. #}
@@ -29,8 +29,8 @@
 {% endif %}
 
 <meta property="article:author" content="https://www.facebook.com/jonathan.sundqvist">
-<meta property="article:section" content="{{ article.category }}">
-<meta property="article:tags" content="{{ article.tags|join(', ') }}">
+<meta property="article:section" content="{{ article.category }}">
+<meta property="article:tags" content="{{ article.tags|join(', ') }}">
 
 
 {# twitter things #}
@@ -42,14 +42,14 @@
       "@type": "Article",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{ SITEURL }}/"
+        "@id": "{{ SITEURL }}/"
       },
-      "datePublished": "{{ article.date|datetimeformat("%Y-%m-%d") }}",
-      "headline": "{{ article.title }}",
+      "datePublished": "{{ article.date|datetimeformat("%Y-%m-%d") }}",
+      "headline": "{{ article.title }}",
       {# "image": [], remove when I have proper images #}
       "author": {
         "@type": "Person",
-        "name": "{{ AUTHOR }}",
+        "name": "{{ AUTHOR }}",
         "jobTitle": "Software Engineer"
       },
       "keywords": {{ article.tags|jsonarray }},
