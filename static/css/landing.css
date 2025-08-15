@@ -737,6 +737,10 @@ details > summary::marker {
 }
 
 @media (max-width: 480px) {
+    .header-contact {
+        padding-left: unset;
+    }
+
     .email-input {
         max-width: 170px;
     }
