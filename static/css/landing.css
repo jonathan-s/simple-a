@@ -32,14 +32,14 @@
 
 @font-face {
     font-family: 'Quicksand';
-    src: url("/static/fonts/Quicksand-Regular.ttf") format("truetype");
+    src: url("/static/fonts/Quicksand-medium.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Quicksand';
-    src: url("/static/fonts/Quicksand-Medium.ttf") format("truetype");
+    src: url("/static/fonts/Quicksand-Regular.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
 }
@@ -569,11 +569,12 @@ details > summary::marker {
     margin-bottom: 30px;
 
     .question {
-    padding: 20px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-bottom: 1px solid var(--lighter);
+        padding: 16px 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border-bottom: 1px solid var(--lighter);
+    }
 
     p {
         margin-top: 8px;
@@ -736,5 +737,11 @@ details > summary::marker {
 }
 
 @media (max-width: 480px) {
+    .email-input {
+        max-width: 170px;
+    }
 
+    .container {
+        padding: 0 12px;
+    }
 }
