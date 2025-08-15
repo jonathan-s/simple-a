@@ -4,12 +4,12 @@
   font-family: 'Philosopher';
   font-style: normal;
   font-weight: 400;
-  src: url(/theme/fonts/philosopher-latin.woff2) format('woff2');
+  src: url(/static/fonts/philosopher-latin.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 300;
-  src: url(/theme/fonts/oswald-latin.woff) format('woff');
+  src: url(/static/fonts/oswald-latin.woff) format('woff');
 }
