@@ -1,0 +1,21 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 195" width="216" height="195">
+	<title>montblu</title>
+	<style>
+		.s0 { fill: #040708 } 
+		.s1 { fill: #eae33d } 
+		.s2 { fill: #eea700 } 
+		.s3 { fill: #00cc82 } 
+		.s4 { fill: #98ce34 } 
+		.s5 { fill: #0088c8 } 
+		.s6 { fill: #00a6a8 } 
+		.s7 { fill: #085bfc } 
+	</style>
+	<path class="s0" d="m45.3 113.8q22.7 39.3 45.3 78.5h-90.6z"/>
+	<path class="s1" d="m133.2 147.3q13 22.5 26 45h-52z"/>
+	<path class="s2" d="m187.2 147.3q13 22.5 26 45h-52z"/>
+	<path class="s3" d="m106.6 100q12.6 21.9 25.3 43.8h-50.6z"/>
+	<path class="s4" d="m159.9 100q12.6 21.9 25.3 43.8h-50.6z"/>
+	<path class="s5" d="m79.9 53.8q12 20.8 24 41.6h-48z"/>
+	<path class="s6" d="m133.2 53.8q12 20.8 24 41.6h-47.9z"/>
+	<path class="s7" d="m106.6 7.7q11.3 19.6 22.7 39.2h-45.3z"/>
+</svg>
