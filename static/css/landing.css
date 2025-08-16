@@ -743,3 +743,51 @@ details > summary::marker {
         padding: 0 12px;
     }
 }
+
+
+@media (max-width: 360px) {
+
+    .profile-image {
+        width: 40%;
+        max-height: 225px;
+    }
+
+    .email-input {
+        max-width: unset;
+    }
+
+    .embeddable-buttondown-form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .job-details {
+        max-width: 220px;
+        /* padding-right: 26px; */
+    }
+
+    details {
+        max-width: 310px;
+    }
+
+    .footer {
+        margin-bottom: 32px;
+
+        .footer-avatar {
+            margin: 0;
+            margin-top: -20px;
+        }
+        .footer-profile {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .footer-info h3 {
+            margin-top: 12px;
+        }
+    }
+
+    section {
+        margin: 64px 0;
+    }
+}
