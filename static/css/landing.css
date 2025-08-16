@@ -763,7 +763,6 @@ details > summary::marker {
     }
     .job-details {
         max-width: 220px;
-        /* padding-right: 26px; */
     }
 
     details {
