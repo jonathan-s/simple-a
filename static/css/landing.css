@@ -13,7 +13,8 @@
     --font-sm-large: 42px;
 
     --section-margin: 128px;
-
+    interpolate-size: allow-keywords;
+    --display-transition: 0.2s;
 }
 
 @font-face {
@@ -433,9 +434,9 @@ button, input {
 
 .portfolio-items {
     display: grid;
-    gap: 30px;
+    gap: 24px;
     margin-bottom: 40px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .portfolio-item {
@@ -474,26 +475,54 @@ button, input {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-}
 
-details[open] .description {
-    overflow: unset;
+    opacity: 1;
+    transition: all 0.01s;
+    transition-behavior: allow-discrete;
+    @starting-style {
+        opacity: 0;
+    }
+    transition-delay: var(--display-transition);
 }
 
 details[open] .description {
     display: none;
+    opacity: 0;
+    transition-delay: 0s
 }
 
 details {
+    display: block;
     max-width: 600px;
     padding-bottom: 24px;
     border-bottom: 1px solid var(--lighter);
     position: relative;
+    overflow: hidden;
+    transition: display var(--display-transition);
+    transition-delay: var(--display-transition);
+    transition-behavior: allow-discrete;
+}
+
+details > * {
+    margin: 0;
+    padding-block: 8px;
+    cursor: initial;
+}
+
+details::details-content {
+    block-size: 0;
+    transition:
+        block-size var(--display-transition) ease-out,
+        content-visibility var(--display-transition) ease-out;
+    transition-behavior: allow-discrete;
+}
+
+details[open]::details-content {
+    block-size: auto;
 }
 
 details .details {
     margin-left:  80px;
-    margin-top: 16px;
     font-size: var(--font-sm);
     color: var(--text-light);
 
@@ -516,8 +545,8 @@ details .details {
 details::after {
     --size: 13px;
     position: absolute;
-    bottom: -5px;
-    right: -20px;
+    top: 10px;
+    right: 0px;
     background-size: contain;
     background-image: url("/static/icons/arrow-down.svg");
     width: var(--size);
@@ -532,6 +561,10 @@ details[open]::after {
 
 details > summary::marker {
     list-style-type: '!!';
+}
+
+details > summary {
+    cursor: pointer;
 }
 
 .job-type, .technologies {
@@ -574,9 +607,6 @@ details > summary::marker {
         border-bottom: 1px solid var(--lighter);
     }
 
-    p {
-        margin-top: 8px;
-    }
 }
 
     .question:last-of-type {
@@ -598,6 +628,11 @@ details > summary::marker {
 
     details.question > summary:hover {
         color: var(--medium);
+    }
+
+    details.question:after {
+        top: 33px;
+        right: 0px;
     }
 }
 
