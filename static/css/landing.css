@@ -607,8 +607,6 @@ details > summary {
         border-bottom: 1px solid var(--lighter);
     }
 
-}
-
     .question:last-of-type {
         border-bottom: unset;
     }
