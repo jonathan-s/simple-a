@@ -111,9 +111,9 @@ h1,h2,h3,h4 {
 }
 
 h1 { font-size: 1.8rem; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1.2em; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.1rem; }
 
 #logo {
   margin: auto 0;
@@ -290,7 +290,7 @@ article p:last-child {
 }
 
 .post-header a {
-    font-size: 1em;
+    font-size: 1.8rem;
     color: #444;
 }
 
@@ -321,7 +321,7 @@ article p:last-child {
 .tags a {
   color: #505050;
   margin-right: 12px;
-  font-size: 0.6em;
+  font-size: 0.6rem;
   padding: 5px 8px 2px 8px;
   text-decoration: none;
   text-transform: uppercase;
@@ -361,7 +361,7 @@ a:hover {
 .tag-list h1 {
   max-width: 300px;
   margin: auto;
-  padding-bottom: 2em;
+  padding-bottom: 3.6rem;
 }
 
 .one-post {
@@ -369,7 +369,7 @@ a:hover {
 }
 
 #pagination {
-  margin-top: 1.5em;
+  margin-top: 1.5rem;
 }
 
 #pagination a {
