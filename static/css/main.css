@@ -1,5 +1,5 @@
-@import "./milk.min.css";
-@import "./milk-responsive.min.css";
+@import "./milk.css";
+@import "./milk-responsive.css";
 @import "./footer.css";
 @import "./photo-category.css";
 @import "./pygments.css";
@@ -110,7 +110,7 @@ h1,h2,h3,h4 {
   text-align: center;
 }
 
-h1 { font-size: 2.4em; }
+h1 { font-size: 1.8rem; }
 h2 { font-size: 2em; }
 h3 { font-size: 1.5em; }
 h4 { font-size: 1.2em; }
@@ -126,17 +126,10 @@ h4 { font-size: 1.2em; }
 
 
 
-/* Bug in milk.responsive.css */
-@media (max-width: 979px) {
-  .navbar-fixed-top, .navbar-fixed-bottom {
-    position: fixed;
-  }
-}
-
-@media (max-width: 979px) {
-  .navbar-fixed-top {
-    top: 0;
-  }
+.navbar-fixed-top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .navbar a {
@@ -174,17 +167,25 @@ h4 { font-size: 1.2em; }
 .menu-container {
   border-bottom: 1px solid #989898;
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
   align-items: center;
-  padding: 5px 20px;
+  padding: 5px 12px;
 }
 
 .menu-container > * {
   flex: 1 1 0%;
 }
 
+.menu-container h2 {
+  margin: 0;
+  font-size: clamp(1.1rem, 0.85rem + 1.2vw, 1.6rem);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
 .menu-container img {
-  max-height: 50px;
+  max-height: clamp(34px, 6vw, 50px);
 }
 
 /* Mobile Styles */
@@ -299,7 +300,6 @@ article p:last-child {
 }
 
 .post-time {
-  margin-top: 1.3em;
   font-family: Philosopher;
 }
 
